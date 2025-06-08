@@ -1,0 +1,48 @@
+RewriteEngine On    # Turn on the rewriting engine
+
+
+RewriteRule    ^menu/([A-Za-z0-9-]+)/?$    menu.php?id=$1    [NC,L]   
+RewriteRule    ^menu/([A-Za-z0-9-]+)/([A-Za-z0-9-]+)/?$    menu.php?id=$1    [NC,L]   
+
+
+RewriteRule    ^login/?$    login.php    [NC,L]   
+RewriteRule    ^register/?$    register.php    [NC,L]   
+RewriteRule    ^register/([A-Za-z0-9-]+)/?$    register.php?ref=$1    [NC,L]   
+RewriteRule    ^signout/?$    signout.php    [NC,L]
+
+
+RewriteRule    ^PrivacyPolicy/?$    fdetails.php?id=1    [NC,L]   
+RewriteRule    ^Terms/?$    fdetails.php?id=2    [NC,L]   
+RewriteRule    ^Warning/?$    fdetails.php?id=3    [NC,L]   
+
+RewriteRule    ^dashboard/?$    home.php    [NC,L]   
+RewriteRule    ^verify/?$    verify.php    [NC,L]
+RewriteRule    ^ChangePassword/?$    changepass.php    [NC,L]   
+RewriteRule    ^Profile/?$    updateprofile.php    [NC,L]
+
+
+
+RewriteRule    ^GetSupport/?$    SupportTicket.php    [NC,L]
+RewriteRule    ^OpenTicket/?$    OpenTicket.php    [NC,L]
+RewriteRule    ^ViewTicket/([A-Za-z0-9-]+)/?$    ViewTicket.php?tid=$1    [NC,L]   
+
+
+RewriteRule    ^News/?$    news.php    [NC,L]
+RewriteRule    ^Referrals/?$    Referrals.php    [NC,L]
+
+RewriteRule    ^Transactions/?$    trxhistory.php    [NC,L]
+RewriteRule    ^Donations/?$    Donations.php    [NC,L]
+RewriteRule    ^recycle/?$    recycle.php    [NC,L]
+RewriteRule    ^RecycleByRef/?$    RecycleByRef.php    [NC,L]
+
+
+RewriteRule    ^ForgotUsername/?$    ForgotUsername.php    [NC,L]
+RewriteRule    ^ForgotPassword/?$    ForgotPassword.php    [NC,L]
+RewriteRule    ^MyLogins/?$    MyLogins.php    [NC,L]
+RewriteRule    ^checkpoint/?$    ip.php    [NC,L]
+
+# php -- BEGIN cPanel-generated handler, do not edit
+# NOTE this account's php is controlled via FPM and the vhost, this is a place holder.
+# Do not edit. This next line is to support the cPanel php wrapper (php_cli).
+# AddType application/x-httpd-ea-php56 .php .phtml
+# php -- END cPanel-generated handler, do not edit
